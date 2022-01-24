@@ -19,7 +19,7 @@ layout: page
 
 <ul>
 	<li> I do competitive programming. My achievements can be found <a href="https://cphof.org/profile/ioi:6727">here</a>. </li>
-	<li> ngkan is an acronym for my name, <strong>NG</strong>uyen <strong>K</strong>h<strong>AN</strong>h.</li>
+	<li> ngkan is created by deleting characters from my name, <strong>NG</strong><del>uyen</del> <strong>K</strong><del>h</del><strong>AN</strong><del>h</del>.</li>
 </ul>
 
 <h2>Miscellaneous</h2>
