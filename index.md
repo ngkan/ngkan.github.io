@@ -1,5 +1,3 @@
-### ngkan's home page
-
 My name is Khánh, but I also roll with Kan, or Khanh, or Khan.
 
 I [cook](https://www.instagram.com/food.with.kan/), [photograph](https://www.instagram.com/photos.with.kan/), [blog](blog.ngkan.me), bouldering and much more.
