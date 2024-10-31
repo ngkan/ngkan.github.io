@@ -1,6 +1,6 @@
 My name is Khánh, but I also roll with Kan, or Khanh, or Khan.
 
-I am a first year CS Master student at EPFL. Previously I worked as SWE-SRE at Google, on network system's reliabiliy. My Bachelor in Mathematics & CS was at École polytechnique.
+I am a first year CS Master student at EPFL. Previously I worked as SWE-SRE at Google, on network system's reliability. My Bachelor in Mathematics & CS was at École polytechnique.
 
 I [cook](https://www.instagram.com/food.with.kan/), [photograph](https://www.instagram.com/photos.with.kan/), [blog](https://blog.ngkan.me), bouldering and much more.
 
