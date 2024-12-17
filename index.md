@@ -1,7 +1,5 @@
 # Khanh Nguyen - Khánh Nguyễn 
 
-<img src="oeschinensee.jpg" height="200">
-
 My name is Khánh, but I also roll with Kan, or Khanh, or Khan.
 
 I am a first year CS Master student at EPFL. Previously I worked as SWE-SRE at Google, on network system's reliability. My Bachelor in Mathematics & CS was at École polytechnique.
