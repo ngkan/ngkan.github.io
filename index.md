@@ -1,11 +1,13 @@
 # Khanh Nguyen - Khánh Nguyễn 
 
-My name is Khánh, but I also roll with Kan, or Khanh, or Khan.
+My name is Khánh ([pronunciation](https://www.howtopronounce.com/vietnamese/kh%C3%A1nh-1)), and I also roll with Kan, or Khanh, or Khan.
 
-I am a first year CS Master student at EPFL. Previously I worked as SWE-SRE at Google, on network system's reliability. My Bachelor in Mathematics & CS was at École polytechnique.
+I am currently a first year Master student in CS at EPFL. 
 
-I [cook](https://www.instagram.com/food.with.kan/), [photograph](https://www.instagram.com/photos.with.kan/), [blog](https://blog.ngkan.me), bouldering and much more.
+Previously I worked as SWE-SRE at Google, on network system's reliability. My Bachelor in Mathematics & CS was at École polytechnique.
 
-In my past life I did competitive programming and got some memorable [achievements](https://cphof.org/profile/codeforces:ngkan). Occasionally I put cool things [here](https://cp-wiki.ngkan.me).
+My hobbies include photography ([1](https://flic.kr/ps/45ZTvN), [2](https://www.instagram.com/photos.with.kan/)), [cooking](https://www.instagram.com/food.with.kan/), [blogging](https://blog.ngkan.me), bouldering and many more.
+
+In my distant past life, I did competitive programming and got some memorable [achievements](https://cphof.org/profile/codeforces:ngkan).
 
 You can reach me at khanhn1462 (at) gmail (dot) com.
