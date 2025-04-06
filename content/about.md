@@ -1,4 +1,13 @@
-# Khanh Nguyen - Khánh Nguyễn 
+---
+title: "About"
+draft: false
+date: 2025-04-06T18:57:57+02:00
+description: "About me."
+showAuthor: false
+showWordCount: false
+showReadingTime: false
+showDate: false
+---
 
 My name is Khánh ([pronunciation](https://www.howtopronounce.com/vietnamese/kh%C3%A1nh-1)), and I also roll with Kan, or Khanh, or Khan.
 
