@@ -1,4 +1,4 @@
-colorScheme = "fire"
+colorScheme = "ocean"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 enableSearch = true
@@ -48,7 +48,7 @@ showHeadingAnchors = true
 showPagination = true
 invertPagination = false
 showReadingTime = true
-showTableOfContents = false
+showTableOfContents = true
 showTaxonomies = false
 showAuthorsBadges = false
 showWordCount = true

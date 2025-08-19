@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "ngkan.me"
+title = "Khanh N"
 
 [params]
 displayName = "EN"
@@ -10,7 +10,4 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 description = ""
-
-[params.author]
-name = "Khanh N"
-image = "oeschinensee.jpg"
+author = { name = "Khanh Nguyen", image = "stoos3.jpg" }
