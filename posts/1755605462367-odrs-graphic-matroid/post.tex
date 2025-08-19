@@ -1,0 +1,48 @@
+\newcommand{\tmlX}{\mathcal{X}}
+\newcommand{\tmlH}{\mathcal{H}}
+\newcommand{\tmlD}{\mathcal{D}}
+\newcommand{\vcdim}{\text{VCdim}}
+\newcommand{\Prob}{\textnormal{Pr}}
+\newcommand{\Expt}{\mathbb{E}}
+\newcommand{\squarebrac}[1]{\left[#1\right]}
+\newcommand{\curvebrac}[1]{\left(#1\right)}
+\newcommand{\pointybrac}[1]{\left\{#1\right\}}
+
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\fvx}{\mathbf{x}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\indict}[1]{\mathbf{1}_{#1}}
+\newcommand{\algo}{\mathcal{A}}
+\newcommand{\innerprod}[1]{\left\langle#1\right\rangle}
+\newcommand{\lL}{\mathscr{L}}
+
+As parts of my semester project in the theory group at EPFL, I studied
+how well we can round fractional values within matroid polytopes in an online 
+fashion. There is a lack of understanding on the online version of this problem,
+although many researchs on offline rounding are in the literature.
+
+In this blog I will go through (on a high level) how I approached the problem,
+under graphic matroid conditions.
+
+### TL;DR:
+
+**Theorem**: There exist graphic matroid ODRSes with rounding ratio 
+$\frac{2}{\sqrt{27}} \cdot \frac{1}{\sqrt{n}}$, where $n$ is the number of vertices in the graph.
+
+This result is not tight and I believe that there would exist an algorithm with 
+$O(\frac{1}{\log n})$ rounding ratio.
+
+### Problem definition
+
+Formally, we are given a matroid $\mathcal{M} = (E, \mathcal{I})$, and a polytope relaxation $P_\mathcal{\mathcal{M}}$, which is usually $\textnormal{conv}(\pointybrac{\indict{I} | I \in \mathcal{I{}}})$.
+The elements of $E$ arrive one by one, and when an element $e$ arrives with its associated fractional value $x_e$, the algorithm must decide irrevocably whether to choose it or not.
+At all times, the set of currently selected elements $I$ must satisfy $I \in \mathcal{I}$. 
+The objective of ODRSes is to pick each element $e$ with probability at least $\alpha \cdot x_e$ for $\alpha \in [0, 1]$ as large as possible.
+
+### Warm-ups
+
+### Main idea: contraction
