@@ -1,6 +1,6 @@
 disabled = false
-languageCode = "en"
-languageName = "English"
+locale = "en"
+label = "English"
 weight = 1
 title = "Khanh N"
 
@@ -10,4 +10,13 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 description = ""
-author = { name = "Khanh Nguyen", image = "stoos3.jpg" }
+
+[params.author]
+name = "Khanh Nguyen"
+image = "dublin.jpg"
+headline = "Master's student in Computer Science @ EPFL"
+
+links = [
+    { github = "https://github.com/ngkan" },
+    { x-twitter = "https://x.com/ngkan146" },
+]

@@ -1,0 +1,118 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+
+<style>
+  .academic-home {
+    display: grid;
+    grid-template-columns: minmax(11rem, 14rem) minmax(0, 1fr);
+    align-items: start;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+
+  .academic-home__sidebar {
+    min-width: 0;
+  }
+
+  .academic-home__portrait {
+    width: 11rem;
+    height: 11rem;
+    object-fit: cover;
+  }
+
+  .academic-home__name {
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .academic-home__headline {
+    margin-top: 0.5rem;
+    color: rgb(var(--color-neutral-600));
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .dark .academic-home__headline {
+    color: rgb(var(--color-neutral-400));
+  }
+
+  .academic-home__links {
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .academic-home__content {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+  }
+
+  .academic-home__content > :first-child {
+    margin-top: 0;
+  }
+
+  @media (max-width: 767px) {
+    .academic-home {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .academic-home__portrait {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+</style>
+
+<div class="academic-home">
+  <aside class="academic-home__sidebar">
+    {{ with .Site.Params.Author.image }}
+      {{ $authorImage := "" }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ $authorImage = resources.GetRemote . }}
+      {{ else }}
+        {{ $authorImage = resources.Get . }}
+      {{ end }}
+      {{ if $authorImage }}
+        {{ $final := $authorImage }}
+        {{ $squareImage := $authorImage }}
+        {{ if not (or $disableImageOptimization (eq $authorImage.MediaType.SubType "svg")) }}
+          {{ $final = $authorImage.Fill (print "352x352 q" ( $.Site.Params.Author.imagequality | default "96" )) }}
+          {{ $shortSide := int (math.Min $authorImage.Width $authorImage.Height) }}
+          {{ $squareImage = $authorImage.Crop (printf "%dx%d" $shortSide $shortSide) }}
+        {{ end }}
+        <img
+          class="academic-home__portrait rounded-full"
+          width="176"
+          height="176"
+          alt="{{ $.Site.Params.Author.name | default `Author` }}"
+          src="{{ $final.RelPermalink }}"
+          data-zoom-src="{{ $squareImage.RelPermalink }}">
+      {{ end }}
+    {{ end }}
+
+    <h1 class="academic-home__name">
+      {{ .Site.Params.Author.name | default .Site.Title }}
+    </h1>
+
+    {{ with .Site.Params.Author.headline }}
+      <div class="academic-home__headline">
+        {{ . | markdownify }}
+      </div>
+    {{ end }}
+
+    <div class="academic-home__links">
+      {{ partialCached "author-links.html" . }}
+    </div>
+  </aside>
+
+  <main class="academic-home__content prose dark:prose-invert">
+    {{ .Content }}
+  </main>
+</div>
+
+<section>
+  {{ partial "recent-articles/main.html" . }}
+</section>

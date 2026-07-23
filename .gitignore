@@ -1,2 +1,7 @@
+# Hugo build output and generated resources
 /public/
 /resources/_gen/
+/.hugo_build.lock
+
+# macOS metadata
+.DS_Store
