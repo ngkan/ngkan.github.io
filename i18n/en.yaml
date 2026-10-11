@@ -1,0 +1,5 @@
+article:
+  reading_time:
+    one: "Estimated Reading Time: {{ .Count }} min"
+    other: "Estimated Reading Time: {{ .Count }} mins"
+  reading_time_title: "Estimated Reading Time"

@@ -2,7 +2,7 @@ disabled = false
 locale = "en"
 label = "English"
 weight = 1
-title = "Khanh N"
+title = "ngkan.me"
 
 [params]
 displayName = "EN"
@@ -13,8 +13,8 @@ description = ""
 
 [params.author]
 name = "Khanh Nguyen"
-image = "dublin.jpg"
-headline = "Master's student in Computer Science @ EPFL"
+image = "chatelet.jpg"
+headline = "CS graduate, EPFL"
 
 links = [
     { github = "https://github.com/ngkan" },

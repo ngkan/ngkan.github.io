@@ -4,6 +4,9 @@ date: 2025-08-19
 draft: false
 description: "a description"
 tags: ["algorithms"]
+aliases:
+  - "/blog/1755605462367-odrs-graphic-matroid/"
+disqus_url: "https://ngkan.me/blog/1755605462367-odrs-graphic-matroid/"
 ---
 
 As parts of my semester project in the theory group at EPFL, I studied
@@ -14,7 +17,7 @@ despite extensive researches in the literature on the offline version.
 In this blog I will go through (on a high level) how I approached the problem,
 under graphic matroid conditions.
 
-### TL;DR
+## TL;DR
 
 **Theorem**: There exist graphic matroid ODRSes with rounding ratio 
 $\frac{2}{\sqrt{27}} \cdot \frac{1}{\sqrt{n}}$, where $n$ is the number of vertices in the graph.
@@ -22,7 +25,7 @@ $\frac{2}{\sqrt{27}} \cdot \frac{1}{\sqrt{n}}$, where $n$ is the number of verti
 This result is not tight and I believe that there would exist an algorithm with 
 $O\left(\frac{1}{\log n}\right)$ rounding ratio.
 
-### Problem definition
+## Problem definition
 
 Formally, we are given a matroid $\mathcal{M} = (E, \mathcal{I})$, and a
 polytope relaxation $P_\mathcal{\mathcal{M}}$, which is usually
@@ -35,14 +38,14 @@ objective of our algorithms is to pick each element $e$ with probability at
 least $\alpha \cdot x_e$ for $\alpha \in [0, 1]$ as large as possible, in which
 we call the maximal $\alpha$ the rounding ratio of the algorithm.
 
-### Warm-ups
+## Warm-ups
 
 There exist ODRSes with $\alpha = 1$ for uniform matroids (why?).
 
 I believe that efficient ODRSes for any kind of matroids depend on how well we 
 can incorporate and manipulate a set of uniform-ODRSes into the algorithms.
 
-### Contraction & merging uniform ODRS instances
+## Contraction & merging uniform ODRS instances
 
 Let there be an instance of uniform ODRS between any pair of vertices.
 As an online edge arrive, we will handle it according to the ODRS instance corresponding

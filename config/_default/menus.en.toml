@@ -11,13 +11,13 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Publications"
-  pageRef = "publications"
+  name = "Prototyping"
+  pageRef = "prototyping"
   weight = 10
 
 [[main]]
-  name = "Blog"
-  pageRef = "blog"
+  name = "Writing"
+  pageRef = "writing"
   weight = 20
 
 

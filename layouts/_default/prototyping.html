@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="prototyping-layout">
+  <header class="page-header">
+    <h1 class="text-neutral-900 dark:text-neutral">{{ .Title | emojify }}</h1>
+  </header>
+  {{ with .Content }}
+    <div class="prose dark:prose-invert prototyping-intro">{{ . }}</div>
+  {{ end }}
+  <div class="prototype-list">
+    {{ range .Params.prototypes }}
+    <article class="prototype-entry">
+      <h2 class="prototype-entry__title">
+        {{ with .url }}<a href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer">{{ end }}
+        {{ .title }}
+        {{ with .url }}</a>{{ end }}
+      </h2>
+      {{ with .description }}<p class="prototype-entry__description">{{ . }}</p>{{ end }}
+      {{ if or .date .links }}
+      <div class="prototype-entry__meta">
+        {{ with .date }}<time datetime="{{ . }}">{{ time.Format "02 Jan 2006" . }}</time>{{ end }}
+        {{ range .links }}
+          <a href="{{ .url | safeURL }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
