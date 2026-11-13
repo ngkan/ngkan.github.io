@@ -1,5 +1,3 @@
 ---
 title: "Writing"
-aliases:
-  - "/blog/"
 ---

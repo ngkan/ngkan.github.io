@@ -5,6 +5,7 @@ draft: false
 description: "a description"
 tags: ["algorithms"]
 aliases:
+  - "/writing/1755605462367-odrs-graphic-matroid/"
   - "/blog/1755605462367-odrs-graphic-matroid/"
 disqus_url: "https://ngkan.me/blog/1755605462367-odrs-graphic-matroid/"
 ---

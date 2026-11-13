@@ -9,5 +9,3 @@ showComments: false
 showPagination: false
 prototypes: []
 ---
-
-It's empty ... (for now)

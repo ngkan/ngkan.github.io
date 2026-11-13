@@ -3,10 +3,30 @@
   <header class="page-header">
     <h1 class="text-neutral-900 dark:text-neutral">{{ .Title | emojify }}</h1>
   </header>
+  {{ if and (not .Content) (not .Params.prototypes) (not .RegularPages) }}
+    <p>It's empty ... (for now)</p>
+  {{ end }}
   {{ with .Content }}
     <div class="prose dark:prose-invert prototyping-intro">{{ . }}</div>
   {{ end }}
   <div class="prototype-list">
+    {{ range .RegularPages.ByDate.Reverse }}
+    <article class="prototype-entry">
+      <h2 class="prototype-entry__title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ if .Draft }}<span class="text-sm font-normal text-neutral-500 dark:text-neutral-400">(Draft)</span>{{ end }}
+      </h2>
+      {{ with .Description }}<p class="prototype-entry__description">{{ . }}</p>{{ end }}
+      {{ if or .Date .Params.projectURL }}
+      <div class="prototype-entry__meta">
+        {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "02 Jan 2006" }}</time>{{ end }}
+        {{ with .Params.projectURL }}
+        <a href="{{ . | safeURL }}" target="_blank" rel="noopener noreferrer"><span class="prototype-entry__icon" aria-hidden="true">{{ partial "icon.html" "github" }}</span>GitHub</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+    {{ end }}
     {{ range .Params.prototypes }}
     <article class="prototype-entry">
       <h2 class="prototype-entry__title">
@@ -19,7 +39,7 @@
       <div class="prototype-entry__meta">
         {{ with .date }}<time datetime="{{ . }}">{{ time.Format "02 Jan 2006" . }}</time>{{ end }}
         {{ range .links }}
-          <a href="{{ .url | safeURL }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+          <a href="{{ .url | safeURL }}" target="_blank" rel="noopener noreferrer">{{ if eq (lower .label) "github" }}<span class="prototype-entry__icon" aria-hidden="true">{{ partial "icon.html" "github" }}</span>{{ end }}{{ .label }}</a>
         {{ end }}
       </div>
       {{ end }}

@@ -5,11 +5,6 @@
   margin-inline: auto;
 }
 
-/* The customized homepage keeps its wider, two-column layout. */
-#main-content:has(.academic-home) {
-  max-width: none;
-}
-
 /* White article cards stand out through their outline and a soft shadow. */
 .blog-post-list .article-link--simple {
   background-color: rgb(var(--color-neutral));
@@ -34,7 +29,7 @@ html:not(.dark) .blog-post-list .article-link--simple {
 }
 
 /* Keep first-level headings compact throughout the main content. */
-#main-content h1:not(.academic-home__name) {
+#main-content h1 {
   font-size: 1.75rem;
   line-height: 1.3;
 }
@@ -45,7 +40,7 @@ html:not(.dark) .blog-post-list .article-link--simple {
   font-weight: 700;
 }
 
-/* Shared heading position and spacing for the three navigation pages. */
+/* Shared heading position and spacing for navigation pages. */
 .page-header {
   margin-top: 1.25rem;
   padding-bottom: 1.5rem;
@@ -60,26 +55,35 @@ html:not(.dark) .blog-post-list .article-link--simple {
 
 .prototyping-intro > :first-child { margin-top: 0; }
 .prototyping-intro { margin-bottom: 1.75rem; }
-.prototype-entry + .prototype-entry { margin-top: 2rem; }
+.prototype-entry + .prototype-entry { margin-top: 1.5rem; }
 
 .prototype-entry__title {
-  margin-bottom: 0.4rem;
-  font-size: 1.1rem;
-  font-weight: 700;
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 500;
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
 
 .prototype-entry__title a:hover { text-decoration: underline; }
-.prototype-entry__description { margin-bottom: 0.5rem; font-size: 1rem; }
+.prototype-entry__description {
+  margin: 0;
+  color: rgb(var(--color-neutral-600));
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.dark .prototype-entry__description { color: rgb(var(--color-neutral-400)); }
 
 .prototype-entry__meta {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.5rem;
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+  margin-top: 0.2rem;
+  color: rgb(var(--color-neutral-500));
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .prototype-entry__meta > * + *::before {
@@ -91,10 +95,17 @@ html:not(.dark) .blog-post-list .article-link--simple {
 
 .prototype-entry__meta a {
   color: rgb(var(--color-primary-600));
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
+  text-decoration: none;
 }
 
+.prototype-entry__meta a:hover { text-decoration: underline; }
+.prototype-entry__icon {
+  display: inline-block;
+  margin-right: 0.25rem;
+  vertical-align: -0.125em;
+}
+
+.prototype-entry__icon .icon { margin: 0; }
 .dark .prototype-entry__meta a { color: rgb(var(--color-primary-400)); }
 
 /* Keep ToC text size and weight consistent; distinguish levels with bullets. */
